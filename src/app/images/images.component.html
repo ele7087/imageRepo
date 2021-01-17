@@ -1,0 +1,9 @@
+<div>
+    <button type="submit" (click)="logout()" class="btn btn-default">Logout</button>
+    <button class="nav-item nav-link-edit" [routerLink]="['/uploader']">Upload a Photo</button >
+    <button class="nav-item nav-link-edit" [routerLink]="['/explore']">Explore</button >
+    <button class="nav-item nav-link-edit" [routerLink]="['/uploads']">My Uploads</button >
+  </div>
+<ul>
+    <img *ngFor="let image of images | async" [src]="image.downloadURL">
+</ul>

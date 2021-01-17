@@ -1,0 +1,13 @@
+<div>
+  <h3> Login/Signup </h3>
+  <div class="formGroup">
+    <input type="text" class="formControl" placeholder="Email Address" #email required>
+  </div>
+  <div class="formGroup">
+    <input type="password" class="formControl" placeholder="Password" #password required>
+  </div>
+  <div class="formGroup">
+    <input type="button" class="btn btnPrimary" value="Sign Up" (click)="trySignup(email.value, password.value)">
+    <input type="button" class="btn btnPrimary" value="Login" (click)="tryLogin(email.value, password.value)">
+  </div>
+</div>

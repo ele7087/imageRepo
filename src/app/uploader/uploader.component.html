@@ -1,0 +1,31 @@
+<div>
+  <button type="submit" (click)="logout()" class="btn btn-default">Logout</button>
+  <button class="nav-item nav-link-edit" [routerLink]="['/uploader']">Upload a Photo</button >
+  <button class="nav-item nav-link-edit" [routerLink]="['/explore']">Explore</button >
+  <button class="nav-item nav-link-edit" [routerLink]="['/uploads']">My Uploads</button >
+</div>
+<div>
+  <label for="private"> Make my uploads private
+  <input
+  id="private"
+  type="checkbox"
+  [checked]="isPrivate"
+  (change)= "isPrivate = !isPrivate"/>
+  </label>
+</div>
+<div class="dropzone" 
+     dropzone
+     (hovered)="toggleHover($event)"
+     (dropped)="onDrop($event)"
+     [class.hovering]="isHovering">
+
+
+     <h3>Image Uploader</h3>
+     <p>Drag and Drop a File</p>
+</div>
+
+<h3>Your Uploads</h3>
+
+<div *ngFor="let file of files">
+  <file-upload [file]="file" [isPrivate] ="isPrivate"></file-upload>
+</div>

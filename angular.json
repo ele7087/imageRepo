@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -91,7 +91,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "imageRepo"
+  "defaultProject": "imageRepo",
+  "cli": {
+    "analytics": "fb49e552-588d-4569-996a-1098b18f2bf9"
+  }
 }
